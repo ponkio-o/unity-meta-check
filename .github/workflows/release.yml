@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: write
 
     steps:
       - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
@@ -49,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: write
 
     strategy:
       matrix:
@@ -104,10 +106,11 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  release-assets:
+  release-binaries:
     name: Build and release binaries
     runs-on: ubuntu-latest
     permissions:
+      # Required to write release assets
       contents: write
 
     steps:
