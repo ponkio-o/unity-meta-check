@@ -1,5 +1,5 @@
 # image-name: ghcr.io/dena/unity-meta-check/unity-meta-check-circleci
-FROM ghcr.io/dena/unity-meta-check/unity-meta-check-builder:latest as builder
+FROM ghcr.io/ponkio-o/unity-meta-check/unity-meta-check-builder:latest as builder
 
 FROM debian:bookworm-slim
 # https://circleci.com/docs/2.0/custom-images/#required-tools-for-primary-containers
