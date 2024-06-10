@@ -38,8 +38,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: build.Dockerfile
           tags: |
-            ghcr.io/ponkio-o/unity-meta-check/unity-meta-check-builder:${{ github.ref_name }}
-            ghcr.io/ponkio-o/unity-meta-check/unity-meta-check-builder:latest
+            ghcr.io/dena/unity-meta-check/unity-meta-check-builder:${{ github.ref_name }}
+            ghcr.io/dena/unity-meta-check/unity-meta-check-builder:latest
           push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -56,11 +56,11 @@ jobs:
       matrix:
         images:
           - dockerfile: ./Dockerfile
-            image_name: ghcr.io/ponkio-o/unity-meta-check/unity-meta-check
+            image_name: ghcr.io/dena/unity-meta-check/unity-meta-check
           - dockerfile: ./.github/images/Dockerfile
-            image_name: ghcr.io/ponkio-o/unity-meta-check/unity-meta-check-gh-action
+            image_name: ghcr.io/dena/unity-meta-check/unity-meta-check-gh-action
           - dockerfile: ./.circleci/images/Dockerfile
-            image_name: ghcr.io/ponkio-o/unity-meta-check/unity-meta-check-circleci
+            image_name: ghcr.io/dena/unity-meta-check/unity-meta-check-circleci
 
     steps:
       - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4

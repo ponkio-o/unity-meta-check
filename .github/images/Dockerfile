@@ -1,5 +1,5 @@
 # image-name: ghcr.io/dena/unity-meta-check/unity-meta-check-gh-action
-FROM ghcr.io/ponkio-o/unity-meta-check/unity-meta-check-builder:latest as builder
+FROM ghcr.io/dena/unity-meta-check/unity-meta-check-builder:latest as builder
 
 FROM debian:bookworm-slim
 RUN apt-get update \
